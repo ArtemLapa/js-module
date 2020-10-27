@@ -71,3 +71,25 @@
 // const sumChocolate = Math.floor(sumWallet / priceChocholate);
 // let shortChange = sumWallet - (sumChocolate * priceChocholate);
 // alert(`Вы можете купить ${sumChocolate} шоколадок \nУ вас осталось ${shortChange} гривен`);
+
+/*
+* Case 9
+*/
+// const userNumber = Number(prompt('Введите трёхзначное число', ''));
+// const firstNumber = Math.floor(Number(userNumber) * 0.01);
+// const secondNumber = Math.floor(userNumber * 0.1) % 10;
+// const thirdNumber = userNumber % 10;
+// const reversNumber = thirdNumber * 100 + secondNumber * 10 + firstNumber;
+
+// alert(`Ваше число наоборот: ${reversNumber}`);
+
+/*
+* Case 10
+*/
+// const depositSum = Number(prompt('Введите сумму депозита', ''));
+// const percentYear = 5;
+// const daysOfYear = 365;
+// const daysOfTwoMonth = 61;
+
+// const sumInteresPercent = ( ( (depositSum * percentYear * daysOfTwoMonth) / daysOfYear ) / 100 ).toFixed(2);
+// alert(`Сумма процентов за два месяца: ${sumInteresPercent} грн`);
