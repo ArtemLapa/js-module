@@ -271,3 +271,41 @@
 // let userDay = new Date(prompt('Ведите день в формате (yyyy-mm-dd)'));
 // userDay.setDate(userDay.getDate() + 1);
 // alert(`Следующий день - ${userDay()}`);
+
+
+/* Циклы */
+
+/*
+* Case 1
+*/
+// const userFirstNumber = Number( prompt('Введите начальное число диапазона', '') );
+// const userSecondNumber = Number( prompt('Введите крайнее число диапазона', '') );
+// let diapazonSum = 0;
+
+// for (let i = userFirstNumber; i <= userSecondNumber; i++) {
+//   diapazonSum += i;
+// }
+// alert(`Сумма всех числе в заданном диапазоне = ${diapazonSum}`);
+
+/*
+* Case 2
+*/
+// let userFirstNumber = Number( Math.abs( prompt('Введите первое число', '') ) );
+// let userSecondNumber = Number( Math.abs( prompt('Введите второе число ', '') ) );
+
+// if (userSecondNumber > userFirstNumber) {
+//   let temp = userFirstNumber;
+//   userFirstNumber = userSecondNumber;
+//   userSecondNumber = temp;
+// }
+// while (true) {
+//   if(userSecondNumber === 0) {
+//     return alert(`Наибольший делитель ${userFirstNumber}`);
+//   }
+//   userFirstNumber %= userSecondNumber;
+
+//   if(userFirstNumber === 0) {
+//     return alert(`Наибольший делитель ${userSecondNumber}`);
+//   }
+//   userSecondNumber %= userFirstNumber;
+// }

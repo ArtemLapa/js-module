@@ -373,6 +373,40 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // let userDay = new Date(prompt('Ведите день в формате (yyyy-mm-dd)'));
 // userDay.setDate(userDay.getDate() + 1);
 // alert(`Следующий день - ${userDay()}`);
+
+/* Циклы */
+
+/*
+* Case 1
+*/
+// const userFirstNumber = Number( prompt('Введите начальное число диапазона', '') );
+// const userSecondNumber = Number( prompt('Введите крайнее число диапазона', '') );
+// let diapazonSum = 0;
+// for (let i = userFirstNumber; i <= userSecondNumber; i++) {
+//   diapazonSum += i;
+// }
+// alert(`Сумма всех числе в заданном диапазоне = ${diapazonSum}`);
+
+/*
+* Case 2
+*/
+// let userFirstNumber = Number( Math.abs( prompt('Введите первое число', '') ) );
+// let userSecondNumber = Number( Math.abs( prompt('Введите второе число ', '') ) );
+// if (userSecondNumber > userFirstNumber) {
+//   let temp = userFirstNumber;
+//   userFirstNumber = userSecondNumber;
+//   userSecondNumber = temp;
+// }
+// while (true) {
+//   if(userSecondNumber === 0) {
+//     return alert(`Наибольший делитель ${userFirstNumber}`);
+//   }
+//   userFirstNumber %= userSecondNumber;
+//   if(userFirstNumber === 0) {
+//     return alert(`Наибольший делитель ${userSecondNumber}`);
+//   }
+//   userSecondNumber %= userFirstNumber;
+// }
 },{}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -401,7 +435,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50414" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50194" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
