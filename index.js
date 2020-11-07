@@ -2,58 +2,65 @@
 
 /*
 * Case 1
+* Запросите у пользователя его имя и выведите в ответ: «Привет, его имя!».
 */
 // const userName = prompt('What is your name?');
 // alert(`Привет, ${userName}!`);
 
 /*
 * Case 2
+* Запросите у пользователя год его рождения, посчитайте, сколько ему лет и выведите результат.
+* Текущий год укажите в коде как константу.
 */
-// const userYear = prompt('В каком году вы родились?', '');
+// const userYear = Number( prompt('В каком году вы родились?', '') );
 // const currentYear = 2020;
-// const howYear = currentYear - Number(userYear);
+// const howYear = currentYear - userYear;
 // alert(howYear);
 
 /*
 * Case 3
+* Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата.
 */
-// const lengthSquare = prompt('Введите длину стороны квадрата', '');
-// const sumSquare = Number(lengthSquare) * 4;
+// const lengthSquare = Number( prompt('Введите длину стороны квадрата', '') );
+// const sumSquare = lengthSquare * 4;
 // alert(`Периметр кдвадрата ${sumSquare}`);
 
 /*
 * Case 4
+* Запросите у пользователя радиус окружности и выведите площадь такой окружности.
 */
-// const userRadius = prompt('Введите радиус окружности', '');
-// const areaSum = Math.PI * (Number(userRadius) ** 2);
+// const userRadius = Number( prompt('Введите радиус окружности', '') );
+// const areaSum = Math.PI * (userRadius ** 2);
 // alert(`Площадь квадрата ${areaSum} см`);
 
 /*
 * Case 5
+* Запросите у пользователя расстояние в км между двумя городами и за сколько часов он хочет добраться.
+* Посчитайте скорость, с которой необходимо двигаться, чтобы успеть вовремя.
 */
-// let userDistance = prompt('Введите расстояние в км', '');
-// userDistance = Number(userDistance);
-
-// let userTime = prompt('За сколько часов вы хотите преодалеть расстояние? (в часах)', '');
-// userTime = Number(userTime);
+// const userDistance = Number( prompt('Введите расстояние в км', '') );
+// const userTime = Number( prompt('За сколько часов вы хотите преодалеть расстояние? (в часах)', '') ) ;
 
 // let userSpeed = userDistance / userTime;
-// let kmSpeed = userSpeed * 36;
+// const kmSpeed = userSpeed * 36;
 // userSpeed = Math.floor(userSpeed * 100) / 100;
 // alert(`Ваша скорость должна быть: ${userSpeed} км/ч`);
 
 /*
 * Case 6
+* Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро.
+* Курс валюты храните в константе.
 */
 // const dollar = 0.84;
 // alert(`1 доллар = ${dollar} евро`)
-// let userNumber = prompt('Введите сумму в долларах', '');
-// userNumber = Number(userNumber);
+// const userNumber = Number( prompt('Введите сумму в долларах', '') );
 // const euro = userNumber * dollar;
 // alert(`${euro} евро`);
 
 /*
 * Case 7
+* Пользователь указывает объем флешки в Гб.
+* Программа должна посчитать, сколько файлов размером в 820 Мб помещается на флешку.
 */
 // const oneFile = 820;
 // let usbSize = prompt('Укажите объём USB накопителя в Гб', '');
@@ -63,12 +70,11 @@
 
 /*
 * Case 8
+* Пользователь вводит сумму денег в кошельке и цену одной шоколадки.
+* Программа выводит, сколько шоколадок может купить пользователь, и сколько сдачи у него останется.
 */
-// let sumWallet = prompt('Сколько у вас денег?', '');
-// sumWallet = Number(sumWallet);
-
-// let priceChocholate = prompt('Сколько стоит шоколадка?', '');
-// priceChocholate = Number(priceChocholate);
+// const sumWallet = Number( prompt('Сколько у вас денег?', '') );
+// const priceChocholate = Number( prompt('Сколько стоит шоколадка?', '') );
 
 // const sumChocolate = Math.floor(sumWallet / priceChocholate);
 // let shortChange = sumWallet - (sumChocolate * priceChocholate);
@@ -76,9 +82,11 @@
 
 /*
 * Case 9
+* Запросите у пользователя трехзначное число и выведите его задом наперед.
+* Для решения задачи вам понадобится оператор % (остаток от деления).
 */
-// const userNumber = Number(prompt('Введите трёхзначное число', ''));
-// const firstNumber = Math.floor(Number(userNumber) * 0.01);
+// const userNumber = Number( prompt('Введите трёхзначное число', '') );
+// const firstNumber = Math.floor( Number(userNumber) * 0.01 );
 // const secondNumber = Math.floor(userNumber * 0.1) % 10;
 // const thirdNumber = userNumber % 10;
 // const reversNumber = thirdNumber * 100 + secondNumber * 10 + firstNumber;
@@ -87,8 +95,10 @@
 
 /*
 * Case 10
+* Пользователь вводит сумму вклада в банк на 2 месяца, с процентной ставкой депозита 5% годовых.
+* Вывести сумму начисленных процентов.
 */
-// const depositSum = Number(prompt('Введите сумму депозита', ''));
+// const depositSum = Number( prompt('Введите сумму депозита', '') );
 // const percentYear = 5;
 // const daysOfYear = 365;
 // const daysOfTwoMonth = 61;
@@ -101,6 +111,8 @@
 
 /*
 * Case 1
+* Запросить у пользователя его возраст и определить, кем он является:
+* ребенком (0–2), подростком (12–18), взрослым (18_60) или пенсионером (60– ...).
 */
 // const userAge = Number( prompt('Сколько вам лет?', '') );
 // if (userAge < 12) {
@@ -115,6 +127,8 @@
 
 /*
 * Case 2
+* Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол,
+* который расположен на этой клавише (1–!, 2–@, 3–# и т. д).
 */
 // const userNumber = prompt('Укажите число от 0 до 9', '');
 // if (userNumber !== null && userNumber !== '') {
@@ -162,6 +176,7 @@
 
 /*
 * Case 3
+* Запросить у пользователя трехзначное число и проверить, есть ли в нем одинаковые цифры.
 */
 // const userNumber = prompt('Введите трёхзначное число', '');
 // userNumber.length > 3 || userNumber.length < 3 ? alert('Это не трёхзначное число!') : alert('Это не трёхзначное число!');
@@ -173,8 +188,10 @@
 
 /*
 * Case 4
+* Запросить у пользователя год и проверить, високосный он или нет.
+* Високосный год либо кратен 400, либо кратен 4 и при этом не кратен 100.
 */
-// const userYear = Number(prompt('Введите год', ''));
+// const userYear = Number( prompt('Введите год', '') );
 // if (userYear % 400 === 0) {
 //   alert('Это високосный год');
 // } else if ( (userYear % 4 === 0) && (userYear % 100 !== 0) ) {
@@ -185,6 +202,7 @@
 
 /*
 * Case 5
+* Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
 */
 // const userNumber = Number(prompt("Введите пятиразрядное число: ", " "));
 
@@ -202,6 +220,8 @@
 
 /*
 * Case 6
+* Написать конвертор валют. Пользователь вводит количество USD, выбирает, в какую валюту хочет перевести
+* EUR, UAN или AZN, и получает в ответ соответствующую сумму.
 */
 // const userMoney = Number( prompt('Введите сумму в долларах которую хотите обменять', '') );
 // const variableCurrency = prompt('Укажите в какую валюты хотите перевести: EUR, UAH, AZN', '');
@@ -216,6 +236,8 @@
 
 /*
 * Case 7
+* Запросить у пользователя сумму покупки и вывести сумму к оплате со скидкой:
+* от 200 до 300 – скидка будет 3%, от 300 до 500 – 5%, от 500 и выше – 7%.
 */
 // const userSum = Number( prompt('Введите сумму покупки', '') );
 
@@ -235,6 +257,8 @@
 
 /*
 * Case 8
+* Запросить у пользователя длину окружности и периметр квадрата.
+* Определить, может ли такая окружность поместиться в указанный квадрат.
 */
 // const userCircle = Number( prompt('Введите длину окружности', '') );
 // const userSquare = Number( prompt('Введите периметр квадрата', '') );
@@ -249,6 +273,8 @@
 
 /*
 * Case 9
+* Задать пользователю 3 вопроса, в каждом вопросе по 3 варианта ответа. За каждый правильный ответ начисляется 2 балла.
+* После вопросов выведите пользователю количество набранных баллов.
 */
 // let points = 0;
 
@@ -267,6 +293,8 @@
 
 /*
 * Case 10
+* Запросить дату (день, месяц, год) и вывести следующую за ней дату.
+* Учтите возможность перехода на следующий месяц, год, а также високосный год.
 */
 // let userDay = new Date(prompt('Ведите день в формате (yyyy-mm-dd)'));
 // userDay.setDate(userDay.getDate() + 1);
@@ -277,6 +305,7 @@
 
 /*
 * Case 1
+* Подсчитать сумму всех чисел в заданном пользователем диапазоне.
 */
 // const userFirstNumber = Number( prompt('Введите начальное число диапазона', '') );
 // const userSecondNumber = Number( prompt('Введите крайнее число диапазона', '') );
@@ -289,6 +318,7 @@
 
 /*
 * Case 2
+* Запросить 2 числа и найти только наибольший общий делитель.
 */
 // let userFirstNumber = Number( Math.abs( prompt('Введите первое число', '') ) );
 // let userSecondNumber = Number( Math.abs( prompt('Введите второе число ', '') ) );
@@ -309,3 +339,167 @@
 //   }
 //   userSecondNumber %= userFirstNumber;
 // }
+
+/*
+* Case 3
+* Запросить у пользователя число и вывести все делители этого числа.
+*/
+// const userNumber = Number( prompt('Enter you numbrt', '') );
+// let delArray = [];
+// for(let i = 1; i <= userNumber; i++) {
+//   if(userNumber % i === 0) {
+//     delArray.push(i)
+//   }
+// }
+// console.log(delArray);
+
+/*
+* Case 4
+* Определить количество цифр в введенном числе.
+*/
+// const userNumber = prompt('Enter your number', '');
+// let numberSum = 0;
+// for(let i = 0; i <= userNumber.length; i++) {
+//   numberSum =+ i;
+// }
+// alert('Lengh your number');
+
+
+/*
+* Case 5
+* Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей. 
+* При этом также посчитать, сколько четных и нечетных. Вывести статистику на экран.
+* Учтите, что достаточно одной переменной (не 10) для ввода чисел пользователем.
+*/
+// const userNumbers = prompt('Введите 10 чисел через запятую', '');
+// const separator = ',';
+// const arrayNumbers = userNumbers.split(separator);
+// let zeroNumber = 0,
+//     oddNumber = 0,
+//     evenNumber = 0,
+//     positivNumber = 0,
+//     negativeNumber = 0;
+
+// arrayNumbers.forEach(element => {
+//   if (Number(element) !== 0) {
+//     if (Number(element) % 2 === 0) {
+//       evenNumber++;
+//       if (Number(element) > 0) {
+//         positivNumber++;
+//       } else {
+//         negativeNumber++;
+//       }
+//     } else {
+//       oddNumber++;
+//       if (Number(element) > 0) {
+//         positivNumber++;
+//       } else {
+//         negativeNumber++;
+//       }
+//     }
+//   } else {
+//     zeroNumber++;
+//   }
+// });
+// alert(`
+//   колличество нулей: ${zeroNumber},
+//   колличество нечётных числе: ${oddNumber},
+//   колличество чётных чисел: ${evenNumber},
+//   колличество положительных чисел: ${positivNumber},
+//   колличество отрицательных числе: ${negativeNumber}`
+// );
+
+/*
+* Case 6
+* Зациклить калькулятор. Запросить у пользователя 2 числа и знак,
+* решить пример, вывести результат и спросить, хочет ли он решить еще один пример.
+* И так до тех пор, пока пользователь не откажется.
+*/
+// let startCalc = Number ( prompt('Желаете начать вычисления? 1 - да, 0 - нет', '') );
+
+// while(startCalc === 1) {
+//   const firstNumber = Number( prompt('Введите первое число', '') );
+//   const mathematicalSign = prompt('Введите знак для операции (+,-,/,*)', '');
+//   const secondNumber = Number( prompt('Введите второе число', '') );
+//   let result = 0;
+  
+//   switch(mathematicalSign) {
+//     case '+':
+//       result = firstNumber + secondNumber;
+//       break;
+//     case '-':
+//       result = firstNumber - secondNumber;
+//       break;
+//     case '/':
+//       result = firstNumber / secondNumber;
+//       break;
+//     case '*':
+//       result = firstNumber * secondNumber;
+//       break;
+//     default:
+//       alert('Вы допустили ошибку');
+//       break;
+//   }
+//   alert(`Результат вычислений = ${result}`);
+//   startCalc = Number ( prompt('Желаете продолжить вычисления? 1 - да, 0 - нет', '') );
+// }
+
+/*
+* Case 7
+* Запросить у пользователя число и на сколько цифр его сдвинуть.
+* Сдвинуть цифры числа и вывести результат (если число 123456 сдвинуть на 2 цифры, то получится 345612).
+*/
+// const userNumber = Number( prompt('Введите число:', '') );
+// const numberShifts = Number( prompt('На сколько позиций нужно подвинуть число? Укажите в цифрах', '') );
+// let arrayNumbers = userNumber.toString().split('');
+
+// let i = 0;
+// let cutNumbers;
+// while(i < numberShifts) {
+//   cutNumbers = arrayNumbers.shift();
+//   arrayNumbers.push(cutNumbers);
+//   i++;
+// }
+// alert(arrayNumbers.join(''));
+
+/*
+* Case 8
+* Зациклить вывод дней недели таким образом: «День недели. Хотите увидеть следующий день?»
+* и так до тех пор, пока пользователь нажимает OK.
+*/
+// const daysOfWeek = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+// let currDay = 0;
+
+// while (confirm(`${daysOfWeek[currDay]}. Хотите увидеть следующий день?`)) {
+//   currDay = (currDay + 1) % daysOfWeek.length;
+// }
+
+/*
+* Case 9
+* Вывести таблицу умножения для всех чисел от 2 до 9.
+* Каждое число необходимо умножить на числа от 1 до 10.
+*/
+// for(let factor = 2; factor <= 9; factor++) {
+//   console.log(`Умножение на ${factor}:`);
+//   for(let multiplicand = 1; multiplicand <= 10; multiplicand++) {
+//     let result = factor * multiplicand;
+//     console.log(`${multiplicand} * ${factor} = ${result}`)
+//   }
+// }
+
+/*
+* Case 10
+* Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 и отгадать его следующим способом:
+* каждую итерацию цикла делите диапазон чисел пополам, записываете результат в N и
+* спрашиваете у пользователя «Ваше число > N, < N или == N?».
+* В зависимости от того, что указал пользователь, уменьшаете диапазон.
+* Начальный диапазон от 0 до 100, поделили пополам и получили 50.
+* Если пользователь указал, что его число > 50, то изменили диапазон на от 51 до 100.
+* И так до тех пор, пока пользователь не выберет == N.
+*/
+// const userNumber = alert('Загадайте число в диапазоне от 0 до 100');
+// let gameDiapazoneStart = 0;
+// let gameDiapazoneEnd = 100;
+// let startGame = confirm('Начинаем игру?');
+// let N = Math.floor((gameDiapazoneEnd - gameDiapazoneStart) / 2) + gameDiapazoneStart;
+// console.log(N);
