@@ -1,7 +1,7 @@
 'use strict';
 /* Функции */
 
-export const functions = () => {
+export const functionsJS = () => {
 /*
 * Case 1
 * Написать функцию, которая принимает 2 числа и возвращает -1, если первое меньше, чем второе;
