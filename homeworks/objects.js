@@ -160,13 +160,101 @@ export const objects = () => {
 
 /*
 * Case 3
-* Создать объект, хранящий в себе отдельно числитель и знаменатель дроби,
+* Создать объект, описывающий время (часы, минуты, секунды),
 * и следующие функции для работы с этим объектом:
 *
-* Функция сложения 2-х объектов-дробей;
-* Функция вычитания 2-х объектов-дробей;
-* Функция умножения 2-х объектов-дробей;
-* Функция деления 2-х объектов-дробей;
-* Функция сокращения объекта-дроби
+* Функция вывода времени на экран;
+* Функция изменения времени на переданное количество секунд;
+* Функция изменения времени на переданное количество минут;
+* Функция изменения времени на переданное количество часов.
+* Учтите, что в последних 3-х функциях, при изменении одной части времени,
+* может измениться и другая. Например, если ко времени «20:30:45» добавить 30 секунд,
+* то должно получиться «20:31:15», а не «20:30:75».
 */
+// function Time(hours, minutes, seconds) {
+//   return {hours:hours, minutes:minutes, seconds:seconds};
+// }
+// const newTime = Time(20, 30, 45);
+
+// const userHour = newTime.hours;
+// const userMinutes = newTime.minutes;
+// const userSeconds = newTime.seconds;
+// // console.log(userHour)
+// const timeNow = (obj) => {
+//   console.log(userHour, userMinutes, userSeconds)
+// }
+// timeNow(newTime);
 };
+// const firstNumber = Time(20,30,45); //obj
+
+// const showTime = (obj) => {
+
+//   const hoursStr = obj.hours.toString();
+//   const minutesStr = obj.minutes.toString();
+//   const secondsStr = obj.seconds.toString();
+
+//   const strtime = `${hoursStr},${minutesStr},${secondsStr}`;
+//   const arrTime = strtime.split(',');
+      
+//   for(let i = 0; i < arrTime.length; i++ ) {
+//     if( arrTime[i] < 10 ){
+//       arrTime[i] = "0" + arrTime[i];
+//     }
+//   }
+
+//   return `${arrTime[0]} : ${arrTime[1]} : ${arrTime[2]}`;
+// }
+
+// const addSecondsInTime = (obj, sec) => {
+//   let seconds = obj.seconds + sec;
+//   let minutes = obj.minutes;
+//   let hours = obj.hours;
+
+//   if(seconds > 60){
+//     seconds = seconds - 60;
+//     minutes += 1; 
+//     if(minutes >= 60) {
+//       minutes = minutes - 60;
+//       hours += 1;
+//     }
+//   }
+
+//   const newObj = Time(hours,minutes,seconds);
+//   return showTime(newObj);
+// }
+
+// const addMinutesInTime = (obj, min) => {
+//   let seconds = obj.seconds;
+//   let minutes = obj.minutes + min;
+//   let hours = obj.hours;
+
+//   if(minutes >= 60) {
+//     minutes = minutes - 60;
+//     hours += 1;
+//   }
+
+//   const newObj = Time(hours,minutes,seconds);
+//   return showTime(newObj);
+// }
+
+// const addhoursInTime = (obj, h) => {
+//   let seconds = obj.seconds;
+//   let minutes = obj.minutes;
+//   let hours = obj.hours + h;
+
+//   if(hours >= 24) {
+//     hours = hours - 24;
+//   }
+
+//   const newObj = Time(hours,minutes,seconds);
+//   return showTime(newObj);
+// }
+
+// console.log(`Основное время`);
+// console.log(showTime(firstNumber));
+// console.log(`К основному времени + 30 сек`);
+// console.log(addSecondsInTime(firstNumber, 30));
+// console.log(`К основному времени + 70 мин`);
+// console.log(addMinutesInTime(firstNumber, 70));
+// console.log(`К основному времени + 2 часа`);
+// console.log(addhoursInTime(firstNumber, 2));

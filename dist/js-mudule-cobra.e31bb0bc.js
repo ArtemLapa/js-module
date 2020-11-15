@@ -980,18 +980,144 @@ var objects = function objects() {
 
   /*
   * Case 3
-  * Создать объект, хранящий в себе отдельно числитель и знаменатель дроби,
+  * Создать объект, описывающий время (часы, минуты, секунды),
   * и следующие функции для работы с этим объектом:
   *
-  * Функция сложения 2-х объектов-дробей;
-  * Функция вычитания 2-х объектов-дробей;
-  * Функция умножения 2-х объектов-дробей;
-  * Функция деления 2-х объектов-дробей;
-  * Функция сокращения объекта-дроби
+  * Функция вывода времени на экран;
+  * Функция изменения времени на переданное количество секунд;
+  * Функция изменения времени на переданное количество минут;
+  * Функция изменения времени на переданное количество часов.
+  * Учтите, что в последних 3-х функциях, при изменении одной части времени,
+  * может измениться и другая. Например, если ко времени «20:30:45» добавить 30 секунд,
+  * то должно получиться «20:31:15», а не «20:30:75».
   */
-};
+  // function Time(hours, minutes, seconds) {
+  //   return {hours:hours, minutes:minutes, seconds:seconds};
+  // }
+  // const newTime = Time(20, 30, 45);
+  // const userHour = newTime.hours;
+  // const userMinutes = newTime.minutes;
+  // const userSeconds = newTime.seconds;
+  // // console.log(userHour)
+  // const timeNow = (obj) => {
+  //   console.log(userHour, userMinutes, userSeconds)
+  // }
+  // timeNow(newTime);
+}; // const firstNumber = Time(20,30,45); //obj
+// const showTime = (obj) => {
+//   const hoursStr = obj.hours.toString();
+//   const minutesStr = obj.minutes.toString();
+//   const secondsStr = obj.seconds.toString();
+//   const strtime = `${hoursStr},${minutesStr},${secondsStr}`;
+//   const arrTime = strtime.split(',');
+//   for(let i = 0; i < arrTime.length; i++ ) {
+//     if( arrTime[i] < 10 ){
+//       arrTime[i] = "0" + arrTime[i];
+//     }
+//   }
+//   return `${arrTime[0]} : ${arrTime[1]} : ${arrTime[2]}`;
+// }
+// const addSecondsInTime = (obj, sec) => {
+//   let seconds = obj.seconds + sec;
+//   let minutes = obj.minutes;
+//   let hours = obj.hours;
+//   if(seconds > 60){
+//     seconds = seconds - 60;
+//     minutes += 1; 
+//     if(minutes >= 60) {
+//       minutes = minutes - 60;
+//       hours += 1;
+//     }
+//   }
+//   const newObj = Time(hours,minutes,seconds);
+//   return showTime(newObj);
+// }
+// const addMinutesInTime = (obj, min) => {
+//   let seconds = obj.seconds;
+//   let minutes = obj.minutes + min;
+//   let hours = obj.hours;
+//   if(minutes >= 60) {
+//     minutes = minutes - 60;
+//     hours += 1;
+//   }
+//   const newObj = Time(hours,minutes,seconds);
+//   return showTime(newObj);
+// }
+// const addhoursInTime = (obj, h) => {
+//   let seconds = obj.seconds;
+//   let minutes = obj.minutes;
+//   let hours = obj.hours + h;
+//   if(hours >= 24) {
+//     hours = hours - 24;
+//   }
+//   const newObj = Time(hours,minutes,seconds);
+//   return showTime(newObj);
+// }
+// console.log(`Основное время`);
+// console.log(showTime(firstNumber));
+// console.log(`К основному времени + 30 сек`);
+// console.log(addSecondsInTime(firstNumber, 30));
+// console.log(`К основному времени + 70 мин`);
+// console.log(addMinutesInTime(firstNumber, 70));
+// console.log(`К основному времени + 2 часа`);
+// console.log(addhoursInTime(firstNumber, 2));
+// alert(`результат в консоли!`);
+
 
 exports.objects = objects;
+},{}],"homeworks/arrays.js":[function(require,module,exports) {
+'use strict';
+/* Массивы */
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.arrays = void 0;
+
+var arrays = function arrays() {
+  /*
+  * Case 1
+  * Создать массив «Список покупок». Каждый элемент массива является объектом,
+  * который содержит название продукта, необходимое количество и куплен или нет.
+  * Написать несколько функций для работы с таким массивом.
+  *
+  * 1)Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом – купленные.
+  * 2)Добавление покупки в список. Учтите, что при добавлении покупки с уже существующим в списке продуктом,
+  * необходимо увеличивать количество в существующей покупке, а не добавлять новую.
+  * 3)Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
+  */
+  var shopList = [{
+    name: 'Яблоки',
+    sum: 4,
+    isBuy: false
+  }, {
+    name: 'Хлеб',
+    sum: 1,
+    isBuy: true
+  }, {
+    name: 'Яйца',
+    sum: 10,
+    isBuy: false
+  }, {
+    name: 'Сахар',
+    sum: 1,
+    isBuy: true
+  }];
+  console.log(shopList);
+  var sortShopList = [];
+
+  var buyList = function buyList(array) {
+    array.sort(function (a) {
+      if (a.isBuy === true) {
+        return true;
+      }
+    });
+  };
+
+  buyList(shopList);
+};
+
+exports.arrays = arrays;
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -1005,12 +1131,15 @@ var _functions = require("./homeworks/functions");
 
 var _objects = require("./homeworks/objects");
 
+var _arrays = require("./homeworks/arrays");
+
 (0, _basic.basicJS)();
 (0, _dataTypes.dataTypes)();
 (0, _cycles.cycles)();
 (0, _functions.functionsJS)();
 (0, _objects.objects)();
-},{"./homeworks/basic":"homeworks/basic.js","./homeworks/dataTypes":"homeworks/dataTypes.js","./homeworks/cycles":"homeworks/cycles.js","./homeworks/functions":"homeworks/functions.js","./homeworks/objects":"homeworks/objects.js"}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _arrays.arrays)();
+},{"./homeworks/basic":"homeworks/basic.js","./homeworks/dataTypes":"homeworks/dataTypes.js","./homeworks/cycles":"homeworks/cycles.js","./homeworks/functions":"homeworks/functions.js","./homeworks/objects":"homeworks/objects.js","./homeworks/arrays":"homeworks/arrays.js"}],"../../../../AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1038,7 +1167,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53176" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50348" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
